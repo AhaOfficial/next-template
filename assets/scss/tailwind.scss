@@ -1,0 +1,13 @@
+@tailwind base;
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/*  글로벌 스타일은 ~assets/scss/app 디렉터리 아래 정의합니다. */
+@import './index';
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+@import './app/utils';

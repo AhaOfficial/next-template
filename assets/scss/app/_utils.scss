@@ -1,0 +1,156 @@
+.divider {
+  &.-hidden-md {
+    @screen md {
+      @apply hidden;
+    }
+  }
+}
+
+@screen xs {
+  .-block-xs {
+    display: block !important;
+  }
+  .-block-sm {
+    display: none !important;
+  }
+  .-block-md {
+    display: none !important;
+  }
+  .-block-lg {
+    display: none !important;
+  }
+  .-inline-block-md {
+    display: none !important;
+  }
+}
+
+@screen sm {
+  .-block-xs {
+    display: none !important;
+  }
+  .-block-sm {
+    display: block !important;
+  }
+  .-inline-block-sm {
+    display: inline-block !important;
+  }
+  .-block-md {
+    display: none !important;
+  }
+  .-block-lg {
+    display: none !important;
+  }
+  .-inline-block-md {
+    display: none !important;
+  }
+  .-hidden-sm {
+    display: none !important;
+  }
+  .sm__mt-2 {
+    @apply mt-2;
+  }
+  .sm__text-sm {
+    @apply text-sm;
+  }
+
+  .-text-lg-sm {
+    @apply text-lg;
+  }
+}
+
+@screen md {
+  .-block-md {
+    display: block !important;
+  }
+  .-inline-block-md {
+    display: inline-block !important;
+  }
+  .-hidden-md {
+    display: none !important;
+  }
+  .md__flex-none {
+    @apply flex-none;
+  }
+  .-text-base-md {
+    @apply text-base;
+  }
+  .-table-row-md {
+    @apply table-row;
+  }
+  .-mx-2-md {
+    @apply -mx-2;
+  }
+  .-pt-0-md {
+    @apply pt-0;
+  }
+  .md__text-gray-100 {
+    @apply text-gray-100;
+  }
+  .md__font-normal {
+    @apply font-normal;
+  }
+  .md__font-bold {
+    @apply font-bold;
+  }
+  .md__mt-8 {
+    @apply mt-8;
+  }
+  .__md-mx-0 {
+    @apply mx-0;
+  }
+  .__md-px-0 {
+    @apply px-0;
+  }
+  .__md-pt-6 {
+    @apply pt-6;
+  }
+  .md__mb-12 {
+    @apply mb-12;
+  }
+  .md__order-1 {
+    @apply order-1;
+  }
+  .md__order-2 {
+    @apply order-2;
+  }
+  .md__ml-10 {
+    @apply ml-10;
+  }
+  .md__mt-10 {
+    @apply mt-10;
+  }
+  .md__mt-16 {
+    @apply mt-16;
+  }
+  .md__mb-4 {
+    @apply mb-4;
+  }
+  .md__ml-2 {
+    @apply ml-2;
+  }
+  .md__items-center {
+    @apply items-center;
+  }
+  .md__text-left {
+    @apply text-left;
+  }
+  .md__text-base {
+    @apply text-base;
+  }
+}
+
+@screen lg {
+  .-block-lg {
+    display: block !important;
+  }
+  .-hidden-lg {
+    display: none !important;
+  }
+
+  .lg__mt-3 {
+    @apply mt-3;
+  }
+  .lg__ml-20 {
+    @apply ml-20;
+  }
+}

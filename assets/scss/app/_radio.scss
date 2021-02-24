@@ -1,0 +1,66 @@
+input[type='radio'] {
+  @apply hidden;
+}
+
+label {
+  @apply font-normal;
+
+  > input[type='radio'] {
+    @apply cursor-pointer hidden;
+
+    & + span {
+      @apply pl-6 cursor-pointer inline-block relative;
+      padding-left: 1.6em;
+
+      &:before,
+      &:after {
+        @apply absolute top-1/2 left-0 block;
+        transform: translate(0, -50%);
+      }
+
+      &:before {
+        @apply border border-gray-200 inline-block align-middle rounded-full;
+
+        content: '';
+        width: 1.13em;
+        height: 1.13em;
+      }
+
+      &:after {
+        @apply bg-primary rounded-full;
+
+        transform: scale(0);
+        content: '';
+        transition: transform 0.12s ease-in-out;
+        width: 0.8em;
+        height: 0.8em;
+        top: 0.35em;
+        left: 0.16em;
+      }
+    }
+
+    &:checked {
+      & + span {
+        &:before {
+          @apply border-primary;
+        }
+
+        &:after {
+          transform: scale(1);
+          fill: #1fc7c1;
+        }
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    > input[type='checkbox'] {
+      & + span {
+        &:before {
+          @apply border-primary;
+        }
+      }
+    }
+  }
+}

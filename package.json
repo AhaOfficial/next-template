@@ -1,0 +1,93 @@
+{
+  "name": "next-template",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "BROWSERSLIST_IGNORE_OLD_DATA=true next -p 3000",
+    "build": "BROWSERSLIST_IGNORE_OLD_DATA=true next build",
+    "export": "BROWSERSLIST_IGNORE_OLD_DATA=true next export",
+    "start": "next start -p 80",
+    "test": "next start -p 3000",
+    "prod": "npm i && npm run build && pm2 restart ecosystem.config.js --env production",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint --fix . --ext .ts,.tsx",
+    "clean": "rm -rf .next && rm -rf node_modules && npm i",
+    "hybrid": "echo '\u001b[0;32m하이브리드 관련 프로젝트 명령어들을 설명합니다.\n\n--- 설치 명령어 ---\nhybrid:install - 하이브리드 모듈 설치\nhybrid:init - 하이브리드 소스코드 템플릿 다운\n\n--- 빌드 및 실행 명령어 ---\nhybrid:build - 하이브리드 소스코드 전체 빌드\nhybrid:android - 안드로이드 앱 실행\nhybrid:ios - iOS 앱 실행\nhybrid:electron - 일렉트론 앱 실행\n\n--- 제거 및 삭제 명령어 ---\nhybrid:clean - 하이브리드 프로젝트 내 빌드 파일들만을 삭제합니다.\nhybrid:uninstall - 하이브리드 모듈들을 제거합니다.\nhybrid:delete - 하이브리드 프로젝트 소스코드를 모두 삭제합니다.\n'",
+    "hybrid:install": "npm i @capacitor/core @capacitor/cli @capacitor/android @capacitor/ios @capacitor-community/electron @ionic/react @ionic/react-router",
+    "hybrid:init": "npx cap init && npx replace-json-property ./capacitor.config.json webDir out && npm run export && npx cap add android && npx cap add ios && npx cap add @capacitor-community/electron",
+    "hybrid:build": "npm run build && npm run export && npx cap copy",
+    "hybrid:android": "npx cap open android",
+    "hybrid:ios": "npx cap open ios",
+    "hybrid:electron": "npx cap open electron",
+    "hybrid:clean": "rm -rf ./android/app/src/main/assets/public && rm -rf ./ios/App/public && rm -rf ./electron/app",
+    "hybrid:uninstall": "npm uninstall @capacitor/core @capacitor/cli @capacitor/android @capacitor/ios @capacitor-community/electron @ionic/react @ionic/react-router",
+    "hybrid:delete": "rm -rf gradle && rm -rf android && rm -rf ios && rm -rf electron && capacitor.config.json"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "eslint --max-warnings 0",
+      "bash -c tsc --noEmit"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "browserslist": "^4.16.1",
+    "dotenv-load": "^2.0.0",
+    "mobx": "^6.0.5",
+    "mobx-react": "^7.0.6",
+    "next": "latest",
+    "next-compose-plugins": "^2.2.1",
+    "next-env": "^1.1.1",
+    "next-images": "^1.7.0",
+    "next-seo": "^4.17.0",
+    "node-sass": "^5.0.0",
+    "nookies": "^2.5.2",
+    "query-string": "^6.13.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-inlinesvg": "^2.2.2",
+    "react-svg": "^11.2.3",
+    "url-pattern": "^1.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "@types/node": "^14.14.22",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "autoprefixer": "^10.2.3",
+    "babel-eslint": "^10.1.0",
+    "classnames": "^2.2.6",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-loader": "^4.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
+    "sass-loader": "^10.1.1",
+    "stylelint": "^13.9.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "tailwindcss": "^1.9.6",
+    "typescript": "4.1.3",
+    "url-loader": "^4.1.1"
+  },
+  "license": "See LICENSE.md"
+}

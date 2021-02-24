@@ -1,0 +1,41 @@
+.carouselBase {
+  @apply relative;
+
+  @screen sm {
+    @apply px-10;
+  }
+
+  @screen lg {
+    @apply px-16;
+  }
+
+  .button-prev,
+  .button-next {
+    @apply w-6 h-6 rounded-full border border-white absolute top-1/2;
+    @apply z-10 -mt-3 hidden;
+
+    svg {
+      @apply text-xs;
+    }
+
+    @screen sm {
+      @apply flex justify-center items-center;
+
+      svg {
+        @apply text-base;
+      }
+    }
+
+    @screen lg {
+      @apply w-10 h-10 -mt-5;
+    }
+  }
+
+  .button-prev {
+    @apply left-0;
+  }
+
+  .button-next {
+    @apply right-0;
+  }
+}

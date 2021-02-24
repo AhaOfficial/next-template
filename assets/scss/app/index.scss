@@ -1,0 +1,102 @@
+@import 'transitions';
+@import 'input';
+@import 'radio';
+@import 'typography';
+@import 'carousel';
+@import 'spinner';
+
+html {
+  @apply antialiased;
+  letter-spacing: -.038rem;
+
+  /* IE and Edge 스크롤 제거 */
+  -ms-overflow-style: none;
+  /* Firefox 스크롤 제거 */
+  scrollbar-width: none;
+  /* Safari 스크롤 제거 */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  @apply relative;
+
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+h1 {
+  @apply text-2xl font-bold;
+}
+
+input,
+button,
+textarea {
+  &:focus {
+    @apply outline-none;
+  }
+}
+button:disabled {
+  @apply cursor-default;
+}
+
+button {
+  @apply inline-flex justify-center items-center leading-none;
+}
+
+.container {
+  max-width: 924px;
+
+  @apply px-5;
+
+  @screen lg {
+    @apply px-0;
+  }
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.fixed-bottom-btn-wrap {
+  @apply fixed inset-x-0 bottom-0 p-5 bg-black z-10;
+
+  @screen md {
+    @apply hidden;
+  }
+}
+
+@-webkit-keyframes autofill {
+  0%,
+  100% {
+    color: #666;
+    background: transparent;
+  }
+}
+
+/* 크롬에서 입력폼 내용 자동완성시 백그라운드 자동변경 해제 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #111111 inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+// 스크롤바 제거
+::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}

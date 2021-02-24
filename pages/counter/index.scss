@@ -1,0 +1,30 @@
+// 카운터
+.counter {
+  @apply bg-white rounded-lg p-6 shadow-md w-64 table text-center;
+
+  // 배경
+  &Page {
+    @apply p-6 bg-gray-100 h-screen;
+  }
+
+  // 제목
+  .title {
+    @apply text-gray-200 text-sm font-semibold w-full m-2;
+  }
+  // 버튼
+  .control {
+    &Button {
+      background-color: #d8d8d8;
+      @apply text-gray-200 outline-none w-12 h-8 rounded-sm text-center;
+      :hover {
+        @apply bg-gray-100 text-gray-200;
+      }
+    }
+
+    // 중간 카운트 입력칸
+    &Input {
+      background-color: #d8d8d8;
+      @apply text-gray-200 w-12 h-8 text-center;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+input[type='text'] {
+  @apply bg-transparent border-b border-gray-200 pl-1 py-2;
+
+  &::placeholder {
+    @apply text-gray-200;
+  }
+}

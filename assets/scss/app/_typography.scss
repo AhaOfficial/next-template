@@ -1,0 +1,107 @@
+.typo {
+  &-pageTitle {
+    @apply text-2xl;
+  }
+
+  &-homeSectionTitle {
+    @apply text-xl;
+  }
+
+  &-cardTitle {
+    @apply text-base;
+
+    &.-sm {
+      @apply text-sm;
+    }
+  }
+
+  &-modal {
+    &Title {
+      @apply text-xl;
+    }
+
+    &Content {
+      @apply text-base;
+    }
+  }
+
+  &-button {
+    @apply text-lg;
+
+    &More {
+      @apply text-base;
+
+      &.-sm {
+        @apply text-sm;
+      }
+    }
+  }
+
+  &-sectionTitle {
+    @apply text-lg;
+  }
+
+  &-content {
+    font-size: 15px;
+  }
+
+  &-menu {
+    @apply text-sm;
+  }
+
+  &-info {
+    @apply text-xs;
+  }
+
+  @screen sm {
+    &-pageTitle {
+      font-size: 32px;
+    }
+
+    &-cardTitle {
+      font-size: 22px;
+
+      &.-sm {
+        @apply text-lg;
+      }
+    }
+
+    &-modal {
+      &Title {
+        font-size: 22px;
+      }
+
+      &Content {
+        @apply text-lg;
+      }
+    }
+
+    &-button {
+      font-size: 22px;
+
+      &More {
+        @apply text-xl;
+
+        &.-sm {
+          @apply text-xl;
+        }
+      }
+    }
+
+    &-sectionTitle {
+      @apply text-xl;
+    }
+
+    &-content {
+      @apply text-base;
+    }
+
+    &-menu {
+      @apply text-base;
+    }
+
+    &-info {
+      @apply text-sm;
+    }
+  }
+}

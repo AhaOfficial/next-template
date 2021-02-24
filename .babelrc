@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "env": {
+    "development" : {
+      "compact": false
+    }
+  }
+}
