@@ -1,10 +1,10 @@
-import { IMyInfo, ServiceStore } from 'interfaces/service'
+import { ServiceStore } from 'interfaces/service'
 
 export class Auth {
   private store!: ServiceStore
 
   session = false
-  user: IMyInfo | null = null
+  user = null
 
   /**
    * 이용자 정보를 획득합니다.
