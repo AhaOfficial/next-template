@@ -2,7 +2,7 @@
 
 <br/>
 
-<center><b>📮 넥스트 틀 버전:</b> 2021-Apeach-1.0.0</center>
+<center><b>📮 넥스트 틀 버전:</b> 2021-Apeach-1.0.1</center>
 
 <br/>
 <br/>

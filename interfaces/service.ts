@@ -26,5 +26,5 @@ export type ServiceContext = AppContext & {
   ctx: ServicePageContext
 }
 
-export interface IUser {
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface IUser {}

@@ -8,7 +8,7 @@ import { observer } from 'mobx-react'
 
 // * 서비스 관련 파일들을 불러옵니다.
 import Stores from 'stores'
-import { StoreProvider, useSSR } from 'core/universal-state'
+import { makeStateJSON, StoreProvider, useSSR } from 'core/universal-state'
 import LayoutDefault from 'components/layouts/Default'
 import Favicon from 'components/head/Favicon'
 import nextSeoConfig from 'next-seo.config'
@@ -110,10 +110,13 @@ const Page = observer(({ Component, pageProps }) => {
  */
 App.getInitialProps = async (context) => {
   // 매 서버 요청마다 상태 저장소 정보를 별도로 구성합니다.
-  const stateJSON = await useSSR(context, Stores)
+  let stateJSON = await useSSR(context, Stores)
 
   // 기존 getInitialProps 를 실행합니다.
   const appProps = await NextApp.getInitialProps(context)
+
+  // JSON 내 순환 참조를 방지합니다.
+  if (!process.browser) stateJSON = makeStateJSON(stateJSON)
 
   return { ...appProps, stateJSON } as AppInitialProps
 }

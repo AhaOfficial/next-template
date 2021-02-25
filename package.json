@@ -1,6 +1,6 @@
 {
   "name": "next-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "BROWSERSLIST_IGNORE_OLD_DATA=true next -p 3000",
     "build": "BROWSERSLIST_IGNORE_OLD_DATA=true next build",
