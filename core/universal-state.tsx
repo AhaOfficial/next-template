@@ -383,7 +383,7 @@ export const useSSR = async <
   const pagePrefetcher = (appContext.Component as any).onPrefetch
   if (typeof pagePrefetcher !== 'undefined') await pagePrefetcher(appContext)
 
-  return process.browser ? stores : makeStateJSON(stores)
+  return stores
 }
 
 /**
