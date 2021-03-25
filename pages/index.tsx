@@ -44,7 +44,7 @@ const HomePage = () => {
       <div className="form">
         <span className="pr-3"> 🎉 </span>
         <span className="info-block">
-          넉스트 템플릿의 예시 페이지들이 아래 나열됩니다.
+          넥스트 템플릿의 예시 페이지들이 아래 나열됩니다.
         </span>
       </div>
 

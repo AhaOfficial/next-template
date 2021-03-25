@@ -2,7 +2,7 @@
 
 <br/>
 
-[🧲 처음 페이지로 돌아가기](https://github.com/AhaOfficial/nuxt-template)
+[🧲 처음 페이지로 돌아가기](https://github.com/AhaOfficial/next-template)
 
 <br/>
 
@@ -34,5 +34,4 @@
 
 <br/>
 
-[🧲 처음 페이지로 돌아가기](https://github.com/AhaOfficial/nuxt-template)
-
+[🧲 처음 페이지로 돌아가기](https://github.com/AhaOfficial/next-template)
